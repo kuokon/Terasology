@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.terasology.logic.console.internal;
-
-import java.util.List;
+package org.terasology.logic.console;
 
 import org.terasology.entitySystem.event.Event;
 import org.terasology.network.ServerEvent;
+
+import java.util.List;
 
 /**
  * This event is used to convey commands marked as runOnServer to the server.
@@ -34,7 +34,7 @@ final class CommandEvent implements Event {
     CommandEvent() {
     }
 
-    CommandEvent(String command, List<String> params) {
+    public CommandEvent(String command, List<String> params) {
         this.command = command;
         this.params = params;
     }
